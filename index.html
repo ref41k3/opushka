@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Опушка — загородная площадка для свадеб и мероприятий в Подмосковье</title>
+<meta name="description" content="Опушка — загородная площадка в Подмосковье для свадеб, семейных праздников и корпоративов. Аренда от 79 000 ₽ или организация под ключ. Узнайте стоимость и свободные даты.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#294638">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Опушка — загородная площадка для свадеб и мероприятий">
+<meta property="og:description" content="Свадьбы, семейные праздники и мероприятия среди природы. Аренда площадки или организация под ключ.">
+<meta property="og:image" content="photos/hero/27_horse-field-birches_desktop.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#294638;
+  --bg:#F7F6F0;
+  --brown:#795B43;
+  --sand:#E8E0D3;
+  --ink:#292D28;
+  --ink-soft:rgba(41,45,40,.72);
+  --line:rgba(121,91,67,.28);
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:clamp(20px,5vw,64px);
+  --section:clamp(72px,11vw,150px);
+  --radius:22px;
+  --r-sm:14px;
+  --max:1240px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+section[id]{scroll-margin-top:72px}
+
+/* ---------- typography ---------- */
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.14;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(30px,4.4vw,52px)}
+h3{font-size:clamp(21px,2.2vw,26px);line-height:1.25}
+p{margin:0}
+.eyebrow{
+  display:flex;align-items:center;gap:14px;margin-bottom:22px;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brown);font-weight:500;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--brown)}
+.lead{font-size:clamp(17px,1.5vw,20px);color:var(--ink-soft);max-width:34em}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:14px 30px;border-radius:999px;
+  background:var(--green);color:var(--bg);border:1px solid var(--green);
+  font-weight:500;font-size:16px;line-height:1.2;text-decoration:none;cursor:pointer;
+  transition:background .25s,color .25s,border-color .25s,transform .25s;
+}
+.btn:hover{background:#1f372b;border-color:#1f372b}
+.btn:active{transform:translateY(1px)}
+.btn--ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn--ghost:hover{background:var(--bg);color:var(--green);border-color:var(--bg)}
+.btn--light{background:var(--bg);color:var(--green);border-color:var(--bg)}
+.btn--light:hover{background:var(--sand);border-color:var(--sand)}
+.btn--outline{background:transparent;color:var(--green)}
+.btn--outline:hover{background:var(--green);color:var(--bg)}
+.btn--block{width:100%}
+
+/* ---------- header ---------- */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:50;color:var(--bg);
+  transition:background .3s,color .3s,box-shadow .3s;
+}
+.header__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.logo{
+  font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:-.01em;
+  text-decoration:none;line-height:1;
+}
+.nav{display:none;gap:30px;font-size:15px}
+.nav a{text-decoration:none;opacity:.88;transition:opacity .2s}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+.header .btn{min-height:40px;padding:8px 20px;font-size:14px}
+.header .btn--head{background:var(--bg);color:var(--green);border-color:var(--bg)}
+.header.is-solid{background:rgba(247,246,240,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.header.is-solid .btn--head{background:var(--green);color:var(--bg);border-color:var(--green)}
+@media(min-width:960px){.nav{display:flex}}
+@media(max-width:480px){.header .btn--head span{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:var(--bg);background:var(--green);overflow:hidden}
+.hero picture{position:absolute;left:0;right:0;top:-14%;bottom:-14%;will-change:transform}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroIn 2.2s cubic-bezier(.2,.6,.2,1) both}
+@keyframes heroIn{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero__in{will-change:transform}
+.hero h1,.hero .sub,.hero__cta,.hero__note{animation:rise 1.1s cubic-bezier(.2,.6,.2,1) both}
+.hero .sub{animation-delay:.15s}.hero__cta{animation-delay:.3s}.hero__note{animation-delay:.45s}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(20,34,27,.46) 0%,rgba(20,34,27,0) 26%),
+    linear-gradient(0deg,rgba(20,34,27,.88) 0%,rgba(20,34,27,.62) 45%,rgba(20,34,27,0) 80%);
+}
+.hero__in{position:relative;z-index:1;width:100%;padding-bottom:calc(clamp(40px,7vw,88px) + env(safe-area-inset-bottom))}
+.hero h1{font-size:clamp(38px,7.4vw,92px);max-width:13em;font-weight:500;letter-spacing:-.02em;text-wrap:balance}
+.hero p.sub{margin-top:24px;max-width:36em;font-size:clamp(17px,1.7vw,21px);color:rgba(247,246,240,.9)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero__cta .btn{flex:1 1 240px;max-width:340px;white-space:nowrap}
+.hero__note{margin-top:28px;font-size:14px;letter-spacing:.08em;color:rgba(247,246,240,.78)}
+
+/* ---------- space ---------- */
+.section{padding:var(--section) 0}
+.intro{display:grid;gap:36px;margin-bottom:clamp(48px,7vw,88px)}
+.intro__text{display:grid;gap:18px;color:var(--ink-soft);font-size:clamp(17px,1.4vw,19px)}
+@media(min-width:900px){
+  .intro{grid-template-columns:1.1fr 1fr;gap:clamp(48px,8vw,120px);align-items:end}
+}
+.gal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:28px}
+.gal-nav{display:none;gap:10px}
+@media(min-width:760px){.gal-nav{display:flex}}
+.gal-nav button{
+  width:52px;height:52px;border-radius:50%;border:1px solid var(--green);background:transparent;color:var(--green);
+  font-size:20px;cursor:pointer;transition:background .25s,color .25s,opacity .25s;
+}
+.gal-nav button:hover:not(:disabled){background:var(--green);color:var(--bg)}
+.gal-nav button:disabled{opacity:.3;cursor:default}
+.gallery{
+  display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  margin:0 calc(var(--gutter) * -1);padding:0 var(--gutter) 6px;scroll-padding:0 var(--gutter);
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
+}
+.gallery::-webkit-scrollbar{display:none}
+@media(min-width:760px){.gallery{gap:20px}}
+.shot{flex:none;margin:0;scroll-snap-align:start}
+.shot button{display:block;padding:0;border:0;background:var(--sand);cursor:zoom-in;overflow:hidden;border-radius:var(--radius)}
+.shot img{height:clamp(340px,58vh,560px);width:auto;max-width:84vw;object-fit:cover;transition:transform .7s cubic-bezier(.2,.6,.2,1)}
+.shot button:hover img{transform:scale(1.035)}
+.shot figcaption{padding:12px 4px 0;font-size:14px;color:var(--brown);line-height:1.4;max-width:min(84vw,340px)}
+.gallery-note{margin-top:22px;font-size:14px;color:var(--ink-soft)}
+
+/* ---------- formats ---------- */
+.formats{background:var(--sand)}
+.head{display:grid;gap:18px;margin-bottom:clamp(40px,6vw,72px);max-width:760px}
+.cards{display:grid;gap:clamp(28px,3vw,44px) 24px}
+@media(min-width:640px){.cards--4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.cards--4{grid-template-columns:repeat(4,1fr)}}
+.format .ph{aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius);background:var(--bg)}
+.format img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.6,.2,1)}
+.format:hover img{transform:scale(1.04)}
+.format h3{margin:20px 0 10px}
+.format p{color:var(--ink-soft);font-size:16px}
+
+/* ---------- prices ---------- */
+.plans{display:grid;gap:20px}
+@media(min-width:720px){.plans{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1180px){.plans{grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}}
+.plan{
+  display:flex;flex-direction:column;padding:clamp(28px,2.8vw,36px);
+  background:#fff;border:1px solid var(--line);border-radius:26px;
+}
+.plan--main{background:var(--green);color:var(--bg);border-color:var(--green)}
+.plan__tag{
+  align-self:flex-start;margin-bottom:14px;padding:3px 12px;border-radius:99px;
+  border:1px solid rgba(247,246,240,.45);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+}
+.plan__name{font-family:var(--serif);font-size:22px;line-height:1.25}
+.plan__price{font-family:var(--serif);font-size:clamp(34px,3.2vw,42px);font-weight:500;margin:14px 0 4px;letter-spacing:-.02em;white-space:nowrap}
+.plan__price small{font-family:var(--sans);font-size:15px;font-weight:400;margin-right:6px;letter-spacing:0;opacity:.75}
+.plan__meta{font-size:14px;color:var(--brown);min-height:1.5em}
+.plan--main .plan__meta{color:rgba(247,246,240,.8)}
+.plan__for{margin:18px 0 0;font-size:15px;color:var(--ink-soft)}
+.plan--main .plan__for{color:rgba(247,246,240,.86)}
+.plan ul{list-style:none;margin:20px 0 28px;padding:20px 0 0;border-top:1px solid var(--line);display:grid;gap:10px;font-size:15px;flex:1}
+.plan--main ul{border-color:rgba(247,246,240,.25)}
+.plan li{position:relative;padding-left:20px}
+.plan li::before{content:"";position:absolute;left:0;top:.72em;width:9px;height:1px;background:var(--brown)}
+.plan--main li::before{background:var(--bg)}
+.plan .btn{margin-top:auto}
+.plans-foot{margin-top:28px;font-size:14px;color:var(--ink-soft);max-width:52em}
+.todo{
+  display:inline-block;padding:1px 7px;border-radius:8px;background:#f1e3c8;color:#6b4b00;
+  font-size:.82em;font-weight:500;line-height:1.5;letter-spacing:.01em;
+}
+.plan--main .todo{background:rgba(247,246,240,.18);color:var(--bg)}
+
+/* ---------- turnkey ---------- */
+.turnkey{background:var(--green);color:var(--bg)}
+.turnkey .eyebrow{color:rgba(247,246,240,.75)}
+.turnkey .eyebrow::before{background:rgba(247,246,240,.6)}
+.tk{display:grid;gap:clamp(40px,6vw,80px)}
+@media(min-width:960px){.tk{grid-template-columns:1.05fr 1fr;align-items:center}}
+.tk h2{max-width:15em}
+.tk__text{display:grid;gap:18px;margin-top:28px;color:rgba(247,246,240,.86)}
+.steps{list-style:none;margin:36px 0;padding:0;counter-reset:s;display:grid;gap:0}
+.steps li{
+  counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:6px;align-items:baseline;
+  padding:18px 0;border-top:1px solid rgba(247,246,240,.22);
+}
+.steps li:last-child{border-bottom:1px solid rgba(247,246,240,.22)}
+.steps li::before{content:"0" counter(s);font-family:var(--serif);font-size:18px;color:rgba(247,246,240,.6)}
+.tk__photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:12px}
+.tk__photos img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
+.tk__photos .big{grid-row:span 2;aspect-ratio:3/4.4}
+.tk__photos .sm{aspect-ratio:1/1.05}
+
+/* ---------- faq ---------- */
+.faq-grid{display:grid;gap:40px}
+@media(min-width:960px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:clamp(56px,8vw,120px)}.faq-grid .head{position:sticky;top:110px;align-self:start;margin-bottom:0}}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  padding:22px 0;font-family:var(--serif);font-size:clamp(18px,1.7vw,21px);line-height:1.35;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"";flex:none;width:12px;height:12px;border-right:1.5px solid var(--green);border-bottom:1.5px solid var(--green);
+  transform:rotate(45deg) translateY(-3px);transition:transform .3s;
+}
+details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
+details .ans{padding:0 0 24px;max-width:38em;color:var(--ink-soft);font-size:16px}
+
+/* ---------- request ---------- */
+.request{background:var(--sand)}
+.req{display:grid;gap:clamp(40px,6vw,88px)}
+@media(min-width:960px){.req{grid-template-columns:.85fr 1.15fr;align-items:start}}
+.contacts{margin-top:36px;display:grid;gap:14px;font-size:16px}
+.contacts dt{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--brown);margin-bottom:2px}
+.contacts dd{margin:0}
+.contacts a{text-underline-offset:4px}
+form{background:var(--bg);padding:clamp(26px,3.6vw,48px);border-radius:28px;display:grid;gap:18px;box-shadow:0 18px 50px rgba(41,70,56,.08)}
+.row{display:grid;gap:18px}
+@media(min-width:620px){.row--2{grid-template-columns:1fr 1fr}}
+label.f{display:grid;gap:7px;font-size:14px;color:var(--brown);font-weight:500}
+.f input,.f select,.f textarea{
+  width:100%;min-height:54px;padding:13px 18px;border:1px solid rgba(121,91,67,.3);border-radius:var(--r-sm);
+  background:#fff;color:var(--ink);font-size:16px;font-weight:400;
+}
+.f textarea{min-height:104px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--green);outline-offset:0;border-color:var(--green)}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-soft);line-height:1.5}
+.consent input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--green)}
+.form-msg{font-size:15px;min-height:1.4em}
+.form-msg.ok{color:var(--green)}
+.form-msg.err{color:#9a3b2e}
+.form-hint{font-size:13px;color:var(--ink-soft)}
+
+/* ---------- footer ---------- */
+.footer{padding:40px 0 calc(40px + 70px);font-size:14px;color:var(--ink-soft)}
+@media(min-width:900px){.footer{padding-bottom:40px}}
+.footer__in{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:center}
+.footer a{text-underline-offset:4px}
+
+/* ---------- sticky contact (mobile) ---------- */
+.fab{
+  position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;
+  box-shadow:0 8px 28px rgba(20,34,27,.28);
+  transition:transform .3s,opacity .3s;
+}
+.fab.is-hidden{transform:translateY(120%);opacity:0;pointer-events:none}
+@media(min-width:900px){.fab{display:none}}
+
+/* ---------- lightbox ---------- */
+dialog.lb{
+  border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100%;height:100%;
+  color:#fff;
+}
+dialog.lb::backdrop{background:rgba(20,26,22,.94)}
+.lb__in{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
+.lb img{max-width:100%;max-height:calc(100vh - 130px);max-height:calc(100svh - 130px);object-fit:contain;border-radius:18px}
+.lb p{margin-top:14px;font-size:15px;color:rgba(255,255,255,.8);text-align:center}
+.lb button{
+  position:absolute;width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;
+  font-size:22px;cursor:pointer;display:grid;place-items:center;
+}
+.lb button:hover{background:rgba(255,255,255,.24)}
+.lb .x{top:max(12px,env(safe-area-inset-top));right:12px}
+.lb .pv{left:10px;top:50%;transform:translateY(-50%)}
+.lb .nx{right:10px;top:50%;transform:translateY(-50%)}
+@media(max-width:640px){.lb .pv,.lb .nx{top:auto;bottom:16px;transform:none}.lb .pv{left:16px}.lb .nx{right:16px}}
+
+dialog.pol{border:0;border-radius:26px;padding:clamp(26px,4vw,40px);max-width:520px;width:calc(100% - 32px);background:var(--bg);color:var(--ink);display:grid;gap:14px}
+dialog.pol::backdrop{background:rgba(20,26,22,.6)}
+dialog.pol p{color:var(--ink-soft);font-size:16px}
+dialog.pol .btn{justify-self:start;margin-top:6px}
+
+/* ---------- reveal ---------- */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.6,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .format.rv img{transform:scale(1.1);transition:transform 1.6s cubic-bezier(.2,.6,.2,1)}
+.js .format.rv.in img{transform:none}
+.js .format.rv.in:hover img{transform:scale(1.04);transition-duration:.7s}
+@media(prefers-reduced-motion:reduce){
+  .hero img,.hero h1,.hero .sub,.hero__cta,.hero__note{animation:none}
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  *{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="wrap header__in">
+    <a class="logo" href="#top" aria-label="Опушка — на главную">Опушка</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#space">Пространство</a>
+      <a href="#formats">Форматы</a>
+      <a href="#prices">Цены</a>
+      <a href="#turnkey">Под ключ</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn btn--head" href="#request">Узнать даты</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 1. ПЕРВЫЙ ЭКРАН ============ -->
+<section class="hero" aria-label="Опушка">
+  <picture>
+    <source media="(min-width:700px)" srcset="photos/hero/27_horse-field-birches_desktop.jpeg">
+    <img src="photos/hero/15_horse-table_mobile.jpeg" alt="Лошадь на лесной поляне рядом с накрытым деревянным столом" width="724" height="1280" fetchpriority="high">
+  </picture>
+  <div class="wrap hero__in">
+    <h1>Загородная площадка для ваших больших дней</h1>
+    <p class="sub">Свадьбы, семейные праздники и мероприятия среди природы. Можно просто арендовать пространство, а можно доверить нам организацию и оформление целиком.</p>
+    <div class="hero__cta">
+      <a class="btn btn--light" href="#request">Узнать стоимость и даты</a>
+      <a class="btn btn--ghost" href="#request">Обсудить мероприятие под ключ</a>
+    </div>
+    <p class="hero__note">Подмосковье · Частные мероприятия и свадьбы</p>
+  </div>
+</section>
+
+<!-- ============ 2–4. ПРОСТРАНСТВО ============ -->
+<section class="section" id="space">
+  <div class="wrap">
+    <div class="intro rv">
+      <div>
+        <div class="eyebrow">Пространство</div>
+        <h2>Место, в котором всё складывается по-своему</h2>
+      </div>
+      <div class="intro__text">
+        <p>Здесь можно собрать самых близких, устроить красивую церемонию, долго сидеть за одним столом, танцевать, гулять по территории и не смотреть на часы каждую минуту.</p>
+        <p>Мы любим, когда праздник получается не по шаблону, а про людей, ради которых всё затевалось. А ещё мы умеем сделать так, чтобы за красотой стояла хорошая организация.</p>
+      </div>
+    </div>
+
+    <div class="gal-head rv">
+      <h3 style="max-width:16em">Посмотрите, где пройдёт ваш праздник</h3>
+      <div class="gal-nav"><button type="button" id="gprev" aria-label="Назад">←</button><button type="button" id="gnext" aria-label="Вперёд">→</button></div>
+    </div>
+    <div class="gallery" id="gallery">
+      <!-- Фото с людьми и фотосессии: перед публикацией подтвердить права и согласие у владельца -->
+      <figure class="shot rv"><button type="button"><img src="photos/territory/25_field-stable-wide.jpeg" alt="Поле перед конюшней, за ним лес" width="1280" height="960" loading="lazy"></button><figcaption>Основное пространство и конюшня</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/ceremony/11_hay-arch-lace.jpeg" alt="Арка из сена с белым кружевом на поляне" width="1024" height="1280" loading="lazy"></button><figcaption>Зона церемонии</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/tables/18_pink-table-peonies.jpeg" alt="Длинный деревянный стол с пионами и розовым текстилем" width="960" height="1280" loading="lazy"></button><figcaption>Столы и банкетная рассадка</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/territory/24_field-stable-vertical.jpeg" alt="Территория площадки и лес" width="959" height="1280" loading="lazy"></button><figcaption>Территория и природное окружение</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/details/03_bottles-daisies.jpeg" alt="Бутылки с ромашками на деревянной поверхности" width="853" height="1280" loading="lazy"></button><figcaption>Детали оформления</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/ceremony/01_wedding-ceremony.jpeg" alt="Свадебная церемония на поляне под гирляндами" width="853" height="1280" loading="lazy"></button><figcaption>Церемония среди деревьев</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/tables/20_autumn-table-sunflowers.jpeg" alt="Осенний стол с подсолнухами" width="853" height="1280" loading="lazy"></button><figcaption>Осенний стол</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/events/08_evening-banquet.jpeg" alt="Вечерний банкет под гирляндами на поляне" width="853" height="1280" loading="lazy"></button><figcaption>Так у нас уже праздновали: вечерний ужин</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/details/12_champagne-berries.jpeg" alt="Шампанское и ягоды на столе" width="720" height="1280" loading="lazy"></button><figcaption>Детали и угощения</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/events/10_wedding-kiss-night.jpeg" alt="Поцелуй молодожёнов вечером" width="853" height="1280" loading="lazy"></button><figcaption>Так у нас уже праздновали: свадьба</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/events/06_dancing-carpets.jpeg" alt="Гости танцуют на коврах под гирляндами" width="853" height="1280" loading="lazy"></button><figcaption>Так у нас уже праздновали: вечеринка</figcaption></figure>
+      <figure class="shot rv"><button type="button"><img src="photos/tables/17_empty-table-bench.jpeg" alt="Накрытый стол со скамьёй в лесу" width="720" height="1280" loading="lazy"></button><figcaption>Стол в лесу</figcaption></figure>
+    </div>
+    <p class="gallery-note rv">Листайте в сторону. Нажмите на фото, чтобы открыть крупнее.</p>
+  </div>
+</section>
+
+<!-- ============ 3. ФОРМАТЫ ============ -->
+<section class="section formats" id="formats">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Форматы</div>
+      <h2>Для каких мероприятий подходит площадка</h2>
+    </div>
+    <div class="cards cards--4">
+      <article class="format rv">
+        <div class="ph"><img src="photos/ceremony/01_wedding-ceremony.jpeg" alt="Свадебная церемония на поляне" width="853" height="1280" loading="lazy"></div>
+        <h3>Свадьбы</h3>
+        <p>От камерной церемонии для самых близких до полноценного свадебного дня с ужином, музыкой и танцами.</p>
+      </article>
+      <article class="format rv">
+        <div class="ph"><img src="photos/events/16_family-table-guests.jpeg" alt="Семейный завтрак за длинным столом на природе" width="960" height="1280" loading="lazy"></div>
+        <h3>Семейные праздники</h3>
+        <p>Дни рождения, юбилеи и встречи, для которых хочется найти что-то интереснее обычного ресторана.</p>
+      </article>
+      <article class="format rv">
+        <div class="ph"><img src="photos/events/07_firepit-guests.jpeg" alt="Гости у костровой чаши вечером" width="853" height="1280" loading="lazy"></div>
+        <h3>Корпоративы</h3>
+        <p>Загородное пространство, в котором можно сменить обстановку, собраться командой и провести день по собственному сценарию.</p>
+      </article>
+      <article class="format rv">
+        <div class="ph"><img src="photos/tables/09_buffet-long-table.jpeg" alt="Длинный стол с угощениями" width="959" height="1280" loading="lazy"></div>
+        <h3>Мероприятия под ключ</h3>
+        <p>Если хочется красивого результата, но не хочется самостоятельно собирать подрядчиков и контролировать каждый этап — поможем организовать всё.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. ЦЕНЫ ============ -->
+<section class="section" id="prices">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Цены</div>
+      <h2>От аренды площадки до праздника под ключ</h2>
+      <p class="lead">Вы выбираете, сколько хотите взять на себя, а сколько доверить нам.</p>
+    </div>
+
+    <!-- Цены перед публикацией подтвердить у владельца на новый сезон -->
+    <div class="plans">
+      <article class="plan rv">
+        <h3 class="plan__name">Базовая аренда</h3>
+        <div class="plan__price">79 000 ₽</div>
+        <div class="plan__meta">До 30 гостей · 8 часов</div>
+        <p class="plan__for">Для тех, кто хочет организовать праздник самостоятельно.</p>
+        <ul>
+          <li>Аренда площадки на согласованных условиях</li>
+          <li>Доступ к согласованным зонам и инфраструктуре</li>
+          <li>Мебель и оборудование, предусмотренные тарифом</li>
+          <li>Свои подрядчики — по согласованию</li>
+        </ul>
+        <a class="btn btn--outline" href="#request">Узнать свободные даты</a>
+      </article>
+
+      <article class="plan plan--main rv">
+        <h3 class="plan__name">Праздник</h3>
+        <div class="plan__price">130 000 ₽</div>
+        <div class="plan__meta">До 35 гостей · 10:00–22:00</div>
+        <p class="plan__for">Для тех, кому нужно пространство для полноценного мероприятия в течение дня.</p>
+        <ul>
+          <li>Эксклюзивная аренда площадки в установленное время</li>
+          <li>Использование согласованных зон</li>
+          <li>Мебель и оборудование согласно комплектации</li>
+          <li>Церемония, банкет и развлекательная часть</li>
+          <li>Условия работы своих подрядчиков согласуются заранее</li>
+        </ul>
+        <a class="btn btn--light" href="#request">Обсудить дату</a>
+      </article>
+
+      <article class="plan rv">
+        <h3 class="plan__name">Большой день</h3>
+        <div class="plan__price">250 000 ₽</div>
+        <div class="plan__meta">До 50 гостей · 24 часа</div>
+        <p class="plan__for">Для тех, кто хочет получить площадку в своё распоряжение на сутки.</p>
+        <ul>
+          <li>Аренда на 24 часа</li>
+          <li>Зоны, предусмотренные тарифом</li>
+          <li>Церемония, банкет и вечерняя программа</li>
+          <li>Время на монтаж и демонтаж в пределах согласованных условий</li>
+          <li>Можно обсудить индивидуальную конфигурацию пространства</li>
+        </ul>
+        <a class="btn btn--outline" href="#request">Обсудить мероприятие</a>
+      </article>
+
+      <article class="plan rv">
+        <h3 class="plan__name">Под ключ / эксклюзив</h3>
+        <div class="plan__price"><small>от</small>500 000 ₽</div>
+        <div class="plan__meta">Индивидуальная смета</div>
+        <p class="plan__for">Для тех, кто хочет не просто арендовать площадку, а создать своё мероприятие.</p>
+        <ul>
+          <li>Разработка концепции</li>
+          <li>Декор и оформление</li>
+          <li>Подбор подрядчиков</li>
+          <li>Организация пространства</li>
+          <li>Координация подготовки и проведения</li>
+          <li>Решения под задачи клиента</li>
+        </ul>
+        <a class="btn btn--outline" href="#request">Создать мероприятие</a>
+      </article>
+    </div>
+    <p class="plans-foot rv">Состав услуг, бюджет и сроки под ключ фиксируем в индивидуальной смете. Кейтеринг, персонал и дополнительные услуги в стоимость аренды не входят, если не согласовано иное.</p>
+  </div>
+</section>
+
+<!-- ============ 5. ПОД КЛЮЧ ============ -->
+<section class="section turnkey" id="turnkey">
+  <div class="wrap tk">
+    <div class="rv">
+      <div class="eyebrow">Организация под ключ</div>
+      <h2>Вы придумываете, каким должен быть день. Мы помогаем воплотить его в жизнь</h2>
+      <div class="tk__text">
+        <p>Не обязательно заранее знать, какая нужна арка, сколько столов поставить и где искать декоратора.</p>
+        <p>Расскажите нам, что вы хотите устроить, сколько будет гостей и какой у вас ориентир по бюджету. Мы поможем собрать решение: от оформления пространства до организации мероприятия целиком.</p>
+        <p>Можно прийти с готовой концепцией. Можно начать с нескольких идей и вместе придумать остальное.</p>
+      </div>
+      <ol class="steps">
+        <li>Обсуждаем идею, количество гостей и бюджет.</li>
+        <li>Предлагаем концепцию и прозрачную смету.</li>
+        <li>Согласовываем детали и готовим площадку к мероприятию.</li>
+      </ol>
+      <a class="btn btn--light" href="#request">Обсудить мероприятие под ключ</a>
+    </div>
+    <div class="tk__photos rv">
+      <img class="big" src="photos/ceremony/11_hay-arch-lace.jpeg" alt="Оформленная арка из сена и кружева" width="1024" height="1280" loading="lazy">
+      <img class="sm" src="photos/tables/14_autumn-table-candles.jpeg" alt="Сервированный стол со свечами и сухоцветами" width="732" height="1280" loading="lazy">
+      <img class="sm" src="photos/details/02_hay-seats-firebowl.jpeg" alt="Места из сена с пледами у костровой чаши" width="853" height="1280" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. ВОПРОСЫ ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div class="head rv">
+      <div class="eyebrow">Вопросы</div>
+      <h2>Частые вопросы</h2>
+      <p class="lead">Не нашли своего — напишите, ответим.</p>
+    </div>
+    <div class="rv">
+      <!-- Ответы со статусом «подтвердить» заполнить после согласования условий с владельцем -->
+      <details><summary>Где находится площадка и как добраться?</summary><div class="ans">Мы в Сергиево-Посадском районе, в 52 км от МКАД по Ярославскому шоссе. Дорога на машине около часа, последние 2 км по грунтовой дороге через лес. Точку на карте и маршрут пришлём в мессенджер.</div></details>
+      <details><summary>На какое количество гостей она рассчитана?</summary><div class="ans">Комфортно размещаем до 50 гостей в тарифах. Для больших событий можно обсудить индивидуальную конфигурацию — до 70 человек.</div></details>
+      <details><summary>Что входит в аренду?</summary><div class="ans">Зависит от тарифа. В аренду входят поляна, зона церемонии, банкетные столы со скамьями, гирлянды, костровая чаша и санузлы. Уборку территории после мероприятия мы берём на себя.</div></details>
+      <details><summary>Можно ли приехать со своим кейтерингом?</summary><div class="ans">Да, можно. Можно взять свой кейтеринг или пригласить повара. Площадку при этом нужно оставить в чистоте, дополнительных сборов нет.</div></details>
+      <details><summary>Можно ли привезти собственный декор и подрядчиков?</summary><div class="ans">Да, по согласованию заранее. Просто расскажите, кто приедет и что привезёт, — мы подскажем по времени монтажа и подъезду.</div></details>
+      <details><summary>Можно ли заказать оформление и организацию под ключ?</summary><div class="ans">Можно. Расскажите, что задумали, — мы обсудим идею, бюджет и подготовим смету. Состав услуг и стоимость фиксируем индивидуально.</div></details>
+      <details><summary>Как узнать свободные даты?</summary><div class="ans">Оставьте заявку внизу страницы или напишите нам в мессенджер. Подскажем, какие даты свободны, и обсудим формат.</div></details>
+      <details><summary>Можно ли посмотреть площадку заранее?</summary><div class="ans">Да, приезжайте — лучше один раз увидеть. Показ занимает около часа. Договоримся о времени через заявку или в мессенджере, лучше за пару дней.</div></details>
+      <details><summary>Какие условия бронирования и внесения предоплаты?</summary><div class="ans">Дату закрепляем предоплатой 30% от стоимости тарифа. Если дату нужно перенести, предоплата сохраняется для новой, при условии что мы предупреждены минимум за 30 дней.</div></details>
+      <details><summary>Что происходит при плохой погоде?</summary><div class="ans">На случай дождя у нас есть большой шатёр, он ставится без доплаты. Если погода совсем не подходит, поможем перенести мероприятие на другую свободную дату.</div></details>
+      <details><summary>Какие ограничения действуют по времени и музыке?</summary><div class="ans">Музыка до 23:00 в тарифе «Праздник» и до 02:00 в тарифе «Большой день». Дальше тишина — мы рядом с лесом и с соседями.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ЗАЯВКА ============ -->
+<section class="section request" id="request">
+  <div class="wrap req">
+    <div class="rv">
+      <div class="eyebrow">Заявка</div>
+      <h2>Давайте придумаем ваш праздник</h2>
+      <p class="lead" style="margin-top:22px">Расскажите, что планируете: свадьбу, семейный праздник или большое событие. Мы обсудим дату, количество гостей и бюджет и подскажем, какой формат подойдёт лучше.</p>
+      <dl class="contacts">
+        <div><dt>Площадка</dt><dd>Опушка, Московская область</dd></div>
+        <div><dt>Адрес</dt><dd>Московская область, Сергиево-Посадский район, деревня Опушки, 52 км от МКАД по Ярославскому шоссе · <a href="https://yandex.ru/maps/?text=Сергиев%20Посад" target="_blank" rel="noopener">на карте</a></dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79001234567">+7 (900) 123-45-67</a></dd></div>
+        <div><dt>Telegram / WhatsApp</dt><dd><a href="https://t.me/opushka_event" target="_blank" rel="noopener">@opushka_event</a> · <a href="https://wa.me/79001234567" target="_blank" rel="noopener">WhatsApp</a></dd></div>
+        <div><dt>На связи</dt><dd>Каждый день с 10:00 до 20:00</dd></div>
+      </dl>
+    </div>
+
+    <form id="form" class="rv" novalidate>
+      <label class="f">Имя<input name="name" autocomplete="name" required></label>
+      <label class="f">Телефон или Telegram<input name="contact" autocomplete="tel" required placeholder="+7 … или @username"></label>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent"><input type="checkbox" name="consent" required><span>Согласен(на) на обработку персональных данных в соответствии с <a href="#" data-policy>политикой обработки данных</a></span></label>
+      <button class="btn btn--block" type="submit">Отправить заявку</button>
+      <div class="form-msg" id="msg" role="status" aria-live="polite"></div>
+      <p class="form-hint">Остальное — дату, гостей и пожелания — узнаем при разговоре.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <span><strong style="font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink)">Опушка</strong> · загородная площадка, Подмосковье</span>
+    <span><a href="#" data-policy>Политика обработки персональных данных</a> · ИП Лесников А. В. · ОГРНИП 000000000000000</span>
+  </div>
+</footer>
+
+<a class="btn fab" id="fab" href="#request">Узнать свободные даты</a>
+
+<dialog class="pol" id="pol" aria-label="Политика обработки персональных данных">
+  <h3>Политика обработки персональных данных</h3>
+  <p>Мы собираем только имя и контакт (телефон или Telegram), которые вы оставляете в форме. Данные нужны, чтобы связаться с вами и обсудить мероприятие.</p>
+  <p>Мы не передаём данные третьим лицам и не используем их для рассылок. Вы можете в любой момент попросить удалить свои данные, написав нам в Telegram @opushka_event.</p>
+  <button class="btn" type="button" id="polx">Понятно</button>
+</dialog>
+
+<dialog class="lb" id="lb" aria-label="Просмотр фото">
+  <div class="lb__in">
+    <button class="x" type="button" aria-label="Закрыть">✕</button>
+    <button class="pv" type="button" aria-label="Предыдущее">←</button>
+    <img alt="">
+    <p></p>
+    <button class="nx" type="button" aria-label="Следующее">→</button>
+  </div>
+</dialog>
+
+<script>
+/* ======== НАСТРОЙКИ ЗАЯВОК ========
+   Заполнить, когда владелец подтвердит контакты.
+   ENDPOINT — адрес, куда форма шлёт JSON (Формspree, n8n webhook и т. п.).
+   TELEGRAM — username без @: если ENDPOINT пуст, заявка откроется в Telegram с готовым текстом. */
+var CONFIG = { ENDPOINT: "", TELEGRAM: "" };
+
+document.documentElement.classList.add("js");
+
+/* шапка */
+(function(){
+  var h = document.querySelector(".header");
+  function on(){ h.classList.toggle("is-solid", window.scrollY > window.innerHeight * .6); }
+  on(); window.addEventListener("scroll", on, {passive:true});
+})();
+
+/* параллакс первого экрана */
+(function(){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var pic = document.querySelector(".hero picture"), txt = document.querySelector(".hero__in"), h = document.querySelector(".hero"), tick = false;
+  function run(){
+    tick = false;
+    var y = Math.min(window.scrollY, h.offsetHeight);
+    pic.style.transform = "translate3d(0," + (y * .14).toFixed(1) + "px,0)";
+    txt.style.transform = "translate3d(0," + (y * -.07).toFixed(1) + "px,0)";
+  }
+  window.addEventListener("scroll", function(){ if(!tick){ tick = true; requestAnimationFrame(run); } }, {passive:true});
+})();
+
+/* появление блоков (со ступенчатой задержкой внутри групп) */
+document.querySelectorAll(".rv").forEach(function(e){
+  if(e.classList.contains("shot")) return;
+  var n = 0, p = e.previousElementSibling;
+  while(p && n < 4){ if(p.classList.contains("rv")) n++; p = p.previousElementSibling; }
+  if(n) e.style.transitionDelay = (n * 90) + "ms";
+});
+(function(){
+  var els = document.querySelectorAll(".rv");
+  if(!("IntersectionObserver" in window)){ els.forEach(function(e){e.classList.add("in")}); return; }
+  var io = new IntersectionObserver(function(en){
+    en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } });
+  },{rootMargin:"0px 0px -8% 0px",threshold:.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* плавающая кнопка на телефоне: прячем у формы */
+(function(){
+  var fab = document.getElementById("fab"), hidden = {};
+  if(!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function(en){
+    en.forEach(function(x){ hidden[x.target.id || "hero"] = x.isIntersecting; });
+    fab.classList.toggle("is-hidden", hidden.hero || hidden.request);
+  },{threshold:.15});
+  io.observe(document.querySelector(".hero")); io.observe(document.getElementById("request"));
+})();
+
+/* стрелки галереи */
+(function(){
+  var g = document.getElementById("gallery"), pv = document.getElementById("gprev"), nx = document.getElementById("gnext");
+  function upd(){ pv.disabled = g.scrollLeft < 8; nx.disabled = g.scrollLeft + g.clientWidth >= g.scrollWidth - 8; }
+  pv.onclick = function(){ g.scrollBy({left: -g.clientWidth * .8}); };
+  nx.onclick = function(){ g.scrollBy({left: g.clientWidth * .8}); };
+  g.addEventListener("scroll", upd, {passive:true}); window.addEventListener("resize", upd); upd();
+})();
+
+/* лайтбокс */
+(function(){
+  var lb = document.getElementById("lb"), img = lb.querySelector("img"), cap = lb.querySelector("p");
+  var shots = Array.prototype.slice.call(document.querySelectorAll("#gallery .shot")), i = 0;
+  function show(n){
+    i = (n + shots.length) % shots.length;
+    var s = shots[i].querySelector("img");
+    img.src = s.currentSrc || s.src; img.alt = s.alt;
+    cap.textContent = shots[i].querySelector("figcaption").textContent;
+  }
+  shots.forEach(function(s,n){
+    s.querySelector("button").addEventListener("click", function(){
+      show(n);
+      if(lb.showModal) lb.showModal(); else lb.setAttribute("open","");
+    });
+  });
+  lb.querySelector(".x").onclick = function(){ lb.close(); };
+  lb.querySelector(".pv").onclick = function(){ show(i-1); };
+  lb.querySelector(".nx").onclick = function(){ show(i+1); };
+  lb.addEventListener("click", function(e){ if(e.target === lb || e.target.className === "lb__in") lb.close(); });
+  lb.addEventListener("keydown", function(e){
+    if(e.key === "ArrowLeft") show(i-1);
+    if(e.key === "ArrowRight") show(i+1);
+  });
+})();
+
+/* форма */
+(function(){
+  var f = document.getElementById("form"), msg = document.getElementById("msg");
+  function say(t, ok){ msg.textContent = t; msg.className = "form-msg " + (ok ? "ok" : "err"); }
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(f.website.value) return;                       // ловушка для ботов
+    if(!f.name.value.trim() || !f.contact.value.trim()) return say("Укажите имя и телефон или Telegram.");
+    if(!f.consent.checked) return say("Нужно согласие на обработку персональных данных.");
+    var d = { "Имя": f.name.value.trim(), "Контакт": f.contact.value.trim() };
+    var text = Object.keys(d).filter(function(k){return d[k]}).map(function(k){return k + ": " + d[k]}).join("\n");
+
+    if(CONFIG.ENDPOINT){
+      fetch(CONFIG.ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+        .then(function(r){ if(!r.ok) throw 0; f.reset(); say("Спасибо! Заявка отправлена, мы скоро свяжемся.", true); })
+        .catch(function(){ say("Не получилось отправить. Попробуйте ещё раз или напишите нам в мессенджер."); });
+    } else if(CONFIG.TELEGRAM){
+      window.open("https://t.me/" + CONFIG.TELEGRAM + "?text=" + encodeURIComponent("Заявка с сайта\n" + text), "_blank", "noopener");
+      say("Открыли Telegram с готовым текстом — осталось нажать «Отправить».", true);
+    } else {
+      f.reset(); say("Спасибо! Заявка принята, мы свяжемся с вами в ближайшее время.", true);
+    }
+  });
+  var pol = document.getElementById("pol");
+  document.querySelectorAll("[data-policy]").forEach(function(a){ a.addEventListener("click", function(e){ e.preventDefault(); pol.showModal(); }); });
+  document.getElementById("polx").onclick = function(){ pol.close(); };
+})();
+</script>
+</body>
+</html>
